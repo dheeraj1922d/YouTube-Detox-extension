@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Detox</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <h1>YouTube Detox</h1>
+    <form id="preferencesForm">
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" placeholder="Enter your email" required><br /><br />
+      <label for="newPreference">Add a new preference:</label><br />
+      <input type="text" id="newPreference" placeholder="Enter a new preference"><br /><br />
+      <button type="submit">Save</button>
+    </form>
+    <button id="refreshPage">Refresh YouTube</button>
+    <h2>Your Preferences:</h2>
+    <ul id="preferencesList"></ul>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

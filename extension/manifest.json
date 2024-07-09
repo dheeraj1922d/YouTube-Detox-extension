@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube-Detox",
+  "version": "1.0",
+  "description": "Chrome extension to filter YouTube recommendations based on user preferences.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "youtube.svg"
+    }
+  },
+  "permissions": ["activeTab", "storage",  "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

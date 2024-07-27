@@ -3,7 +3,7 @@
 // Function to fetch preferences from the server
 async function fetchPreferencesFromServer(email) {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/user/preferences/${email}`, {
+    const response = await fetch(`https://youtube-detox-extension.onrender.com/api/v1/user/preferences/${email}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch and display preferences on load
   function fetchPreferences(email) {
-    fetch(`http://localhost:3000/api/v1/user/preferences/${email}`)
+    fetch(`https://youtube-detox-extension.onrender.com/api/v1/user/preferences/${email}`)
       .then((response) => response.json())
       .then((data) => {
         displayPreferences(data.topics);
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .map((pref) => pref.trim())
       .filter((topic) => topic.length > 0);
     if (newPreferences.length > 0 && newPreferences[0] !== "") {
-      fetch(`http://localhost:3000/api/v1/user/preferences`, {
+      fetch(`https://youtube-detox-extension.onrender.com/api/v1/user/preferences`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Delete a preference
   function deletePreference(preference) {
     const email = emailInput.value;
-    fetch(`http://localhost:3000/api/v1/user/delete/${email}`, {
+    fetch(`https://youtube-detox-extension.onrender.com/api/v1/user/delete/${email}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
